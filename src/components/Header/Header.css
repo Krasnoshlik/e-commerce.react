@@ -1,0 +1,120 @@
+.hidden {
+    display: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffaa00a0;
+    align-items:center;
+    padding: 18px 5% 18px;
+}
+.burger-menu {
+    display: none;
+}
+.menu-list {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+}
+.menu-list li {
+    font-weight: 500;
+    font-size: medium;
+    cursor: pointer;
+}
+.menu-list li:hover {
+    transition: ease-in-out 0.4s;
+    color: white;
+}
+.logo {
+    margin: 0;
+    font-size: 24px;
+    cursor: pointer;
+}
+.header-icons-wrapper {
+    display: flex;
+    line-height: 0;
+    gap: 16px;
+}
+.cart {
+    display: flex;
+    gap: 4px;
+}
+.cart, .search, .account{
+    cursor: pointer;
+} 
+.cart-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffc552;
+    width: 22px;
+    height: 22px;
+    border-radius: 14px;
+    background-color: black;
+}
+@media screen and (max-width: 700px) {
+  .menu-list, .account, .search {
+    display: none;
+  }
+  .burger-menu {
+    display: block;
+    order: -1;
+    cursor: pointer;
+  }
+  .burger-menu-mobile {
+    position: absolute;
+    z-index: 1000;
+    width: 50%;
+    height: 90%;
+    background-color: white;
+    top: 0px;
+    left: 0px;
+    padding: 24px;
+  }
+  .mobile-logo-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .cross-menu {
+    cursor: pointer;
+  }
+  .mobile-logo-wrapper + input[type=search]{
+    width: 90%;
+    margin: 20px 0px 20px;
+    padding-left: 24px;
+    height: 26px;
+    border-radius: 4px;
+    border: 1px solid #555;
+    background-image: url('../../assets/icons/search.svg');
+    background-size: 15px;
+    background-position: 4px 4px;
+    background-repeat: no-repeat;
+}
+  .mobile-logo {
+    margin: 0;
+    font-weight: 500;
+  }
+  .mobile-menu-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .mobile-menu-list li {
+    font-weight: 500;
+  }
+  .mobile-menu-line {
+    margin: 10px 0px 10px;
+    border: 0.5px solid #bab8b83a
+  }
+  .mobile-menu-list + button {
+    width: 100%;
+    color: white;
+    background-color: black;
+    padding: 10px 0px 10px;
+    border-radius: 6px;
+  }
+}
