@@ -1,0 +1,15 @@
+main {
+    margin: 0px 20px 0px;
+}
+main h2 {
+    font-size: 30px;
+    font-weight: 600;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1440px;
+    gap: 20px;
+}
