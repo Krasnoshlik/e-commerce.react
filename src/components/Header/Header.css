@@ -4,6 +4,7 @@
 
 header {
     display: flex;
+
     justify-content: space-between;
     background-color: #ffaa00a0;
     align-items:center;

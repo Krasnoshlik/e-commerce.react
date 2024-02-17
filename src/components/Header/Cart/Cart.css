@@ -1,0 +1,11 @@
+.position {
+    position: relative;
+}
+.cart-wrapper {
+    z-index: 10000;
+    position: absolute;
+    left: -200px;
+    width: 400px;
+    height: 400px;
+    background-color: white;
+}

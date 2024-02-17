@@ -2,9 +2,10 @@ import { useState } from 'react'
 import './Header.css'
 import Search from '../../assets/icons/search.svg'
 import Account from '../../assets/icons/account.svg'
-import Cart from '../../assets/icons/cart.svg'
+import CartSVG from '../../assets/icons/cart.svg'
 import Burgermenu from '../../assets/icons/burger-menu.svg'
 import CrossMenu from '../../assets/icons/Cross-menu.svg'
+import Cart from './Cart/Cart'
 
 export default function Header() {
     const [burgmenu, setBurgmenu] = useState(false);
@@ -49,7 +50,8 @@ export default function Header() {
         <div className='header-icons-wrapper'>
             <div className='search'><img src={Search} alt="search"/></div>
             <div className='account'><img src={Account} alt="account"/></div>
-            <div className='cart'><img src={Cart} alt="cart"/><div className='cart-count'>0</div></div>
+            <div className='cart'><img src={CartSVG} alt="cart"/><div className='cart-count'>0</div></div>
+            <Cart/>
         </div>
       </header>
     )

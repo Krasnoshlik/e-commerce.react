@@ -8,6 +8,7 @@
     max-width: 260px;
 }
 .product-wrapper h3, .price {
+    margin: 0;
     font-size: 14px;
     font-weight: 500;
 }
@@ -24,4 +25,8 @@
     border-radius: 8px;
     color: white;
     background-color: black;
+}
+.button-position button:hover {
+    cursor: pointer;
+
 }
