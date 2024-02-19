@@ -1,11 +1,107 @@
-.position {
-    position: relative;
+.hidden {
+    display: none;
 }
 .cart-wrapper {
-    z-index: 10000;
-    position: absolute;
-    left: -200px;
-    width: 400px;
-    height: 400px;
+    z-index: 100000;
+    position: fixed;
+    padding: 20px 20px 20px;
+    right: 0px;
+    width: 300px;
+    height: 100%;
+    top: 0px;
     background-color: white;
+    line-height:normal;
+}
+.closure-position {
+    display: flex;
+    padding: 20px 0px 20px;
+    justify-content: space-between;
+}
+.closure-position h2 {
+    margin: 0;
+}
+.item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(223, 223, 223, 0.771);
+}
+.initem-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 180px;
+    gap: 10px;
+}
+.initem-wrapper h3 {
+    margin: 0;
+}
+.initem-wrapper img {
+    width: 96px;
+    max-height: 110px;
+}
+.item p {
+    margin: 0;
+    font-weight: 500;
+}
+.quantity-wrapper {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.quantity-changer {
+    display: flex;
+    padding: 3px 6px 3px;
+    justify-content: space-between;
+    border: 2px solid rgba(223, 223, 223, 0.771);
+    border-radius: 6px;
+}
+.quantity-changer input {
+    max-width: 20px;
+}
+.number-input {
+    display: flex;
+    width: 20px;
+    justify-content: center;
+}
+.quantity-changer button {
+    cursor: pointer;
+    background-color: white;
+    border: 0;
+}
+.input-wrapper input {
+    padding: 10px 10px 10px;
+    border: 1px solid rgba(223, 223, 223, 0.771);
+    border-radius: 4px;
+}
+.input-wrapper button {
+    margin-left: 10px;
+    padding: 10px 20px 10px;
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+    border: 0;
+}
+.total-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 6px 0px 6px;
+    border-bottom: 1px solid rgba(223, 223, 223, 0.771);
+}
+.total-info p,h3 {
+    font-weight: 400;
+    margin: 0;
+}
+.submit {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 20px 10px;
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+    border: 0;
 }
