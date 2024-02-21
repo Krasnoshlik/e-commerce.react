@@ -41,7 +41,7 @@ export default function Cart() {
                         </div>
                     </div>
                         <p>$38.00</p>
-                </div>
+                    </div>
 
 
                     <div className='finalisation-wrapper'>
