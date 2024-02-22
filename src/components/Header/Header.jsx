@@ -9,12 +9,13 @@ import Cart from './Cart/Cart'
 
 export default function Header() {
     const [burgmenu, setBurgmenu] = useState(false);
+    const [cart, setCart] = useState(false);
+
+    function cartChanger() {
+        !cart ? setCart(true) : setCart(false)
+    }
     function handleClick() {
-        if(burgmenu === false){
-        setBurgmenu(true)
-        } else {
-            setBurgmenu(false)
-        }
+        !burgmenu ? setBurgmenu(true) : setBurgmenu(false)
     }
     return (
       <header>
@@ -50,8 +51,8 @@ export default function Header() {
         <div className='header-icons-wrapper'>
             <div className='search'><img src={Search} alt="search"/></div>
             <div className='account'><img src={Account} alt="account"/></div>
-            <div className='cart'><img src={CartSVG} alt="cart"/><div className='cart-count'>0</div></div>
-            <Cart/>
+            <div onClick={cartChanger} className='cart'><img src={CartSVG} alt="cart"/><div className='cart-count'>0</div></div>
+            {cart && <Cart/>}
         </div>
       </header>
     )

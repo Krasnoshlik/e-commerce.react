@@ -4,16 +4,17 @@
     overflow: hidden;
 }
 .main-banner-info-wrapper {
-    width: 34%;
+
     max-width: 480px;
     position: absolute;
-    top: 20%;
-    left: 55%;
-}
-.main-banner-info-wrapper {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+.main-banner-info-wrapper-position {
+    position: relative;
+    top: 70px;
+    left: 55%;
 }
 .main-banner-info-wrapper h1 {
     font-size: 45px;
@@ -37,6 +38,7 @@
         border-radius: 6px;
     }
 }
+
 .main-banner-info-wrapper h1 span {
     color: #377DFF;
 }
@@ -55,8 +57,8 @@
 }
 .main-banner-info-wrapper button:hover {
     cursor: pointer;
-    transition: ease 0.3s;
+    transition: ease-in-out 0.5s;
     background-color: white;
-    color: black;
+    color: #ffaa00a0;
     border: 1px solid white;
 }

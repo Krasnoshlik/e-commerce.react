@@ -21,7 +21,7 @@ export default function Product(props) {
         <button>Add to cart</button>
         </div>
         }
-        <div className='price'>${product.price}</div>
+        <div className='price'>$ {product.price}</div>
     </div>
   )
 }

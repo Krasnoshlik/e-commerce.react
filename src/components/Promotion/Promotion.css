@@ -53,9 +53,9 @@
     border-radius: 8px;
 }
 .shop-now:hover {
-    transition: ease-in-out 0.5s;
     cursor: pointer;
-    background-color: White;
-    color: black;
-    border: 2px solid white;
+    transition: ease-in-out 0.5s;
+    background-color: white;
+    color: #ffaa00a0;
+    border-color:#ffaa00a0;
 }

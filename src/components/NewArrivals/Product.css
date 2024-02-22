@@ -1,5 +1,6 @@
 .product-wrapper{
-    width: 23%;
+    width: 25%;
+    flex-basis: 260px;
     display: flex;
     margin: auto;
     flex-direction: column;
@@ -9,7 +10,7 @@
     width: 100%;
 }
 .product-wrapper h3, .price {
-    margin: 0;
+    margin: 4px 0px 4px;
     font-size: 14px;
     font-weight: 500;
 }
@@ -23,11 +24,15 @@
     margin-left: 5%;
     margin-right: 5%;
     position: absolute;
-    bottom: 30px;
+    bottom: 40px;
     border-radius: 8px;
     color: white;
     background-color: black;
 }
 .button-position button:hover {
     cursor: pointer;
+    transition: ease-in-out 0.5s;
+    background-color: white;
+    color: #ffaa00a0;
+    border-color: #ffaa00a0;
 }

@@ -32,3 +32,11 @@ input:focus {
     color: #6C7275;
     border: 0;
 }
+.email-wrapper button:hover {
+    cursor: pointer;
+    transition: ease-in-out 0.5s;
+    transform: scale(1.1);
+}
+.newsletter-wrapper p {
+    margin: 6px 0px 14px;
+}

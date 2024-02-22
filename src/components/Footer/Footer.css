@@ -2,7 +2,7 @@ footer {
     max-width: 1440px;
     display: flex;
     flex-direction: column;
-    gap: 56px;
+    gap: 36px;
     padding: 60px 20px 32px;
     background-color: #141718;
     color: white;
@@ -45,4 +45,16 @@ footer {
     display: flex;
     flex-direction: row;
     gap: 20px;
+}
+.menu-wrapper li:hover {
+    cursor: pointer;
+}
+.logo-wrapper h2:hover {
+    cursor: pointer;
+}
+.copyright-wrapper p:hover {
+    cursor: pointer;
+}
+.icons-wrapper img:hover {
+    cursor: pointer;
 }

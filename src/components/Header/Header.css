@@ -119,3 +119,8 @@ header {
     border-radius: 6px;
   }
 }
+@media screen and (min-width: 701px) {
+  .burger-menu-mobile {
+    display: none;
+  }
+}

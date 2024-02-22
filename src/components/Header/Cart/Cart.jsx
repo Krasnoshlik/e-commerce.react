@@ -2,8 +2,9 @@ import './Cart.css'
 import Product1 from '../../../assets/Products/product1.jpg'
 
 export default function Cart() {
+    
     return (
-        <div className="cart-wrapper hidden">
+        <div className="cart-wrapper">
             <div className='closure-position'>
             <h2>Order summary</h2>
             <div className='cart-closure'>x</div>
