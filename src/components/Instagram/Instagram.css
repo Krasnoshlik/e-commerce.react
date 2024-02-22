@@ -1,0 +1,29 @@
+.instagram-wrapper {
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0px 40px;
+}
+.insta-photos-wrapper {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.insta-photos-wrapper img {
+    max-width: calc(25% - 20px);
+}
+.insta-photos-wrapper img:hover {
+    transition: ease-in-out 0.7s;
+    transform: scale(1.1);
+}
+.instagram-wrapper span {
+    color: #6C7275;
+    margin: 0;
+}
+.instagram-wrapper h2 {
+    font-size: 40px;
+    margin: 0;
+}

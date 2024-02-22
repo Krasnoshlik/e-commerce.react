@@ -1,7 +1,5 @@
 import Dude from '../../assets/Best Seller/dudewithheadphones.png';
 import './Promotion.css'
-import React from 'react';
-import { useState, useEffect } from 'react';
 
 export default function Promotion() {
 

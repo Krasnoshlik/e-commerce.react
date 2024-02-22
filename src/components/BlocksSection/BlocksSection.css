@@ -1,0 +1,12 @@
+.blocks-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin: 40px 20px 40px;
+    gap: 20px;
+    justify-content: center;
+}
+.block-wrapper {
+    width: calc(25% - 20px);
+    padding: 48px 32px 48px;
+    background-color: #F3F5F7;
+}

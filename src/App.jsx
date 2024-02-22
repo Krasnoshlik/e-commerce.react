@@ -6,6 +6,10 @@ import seconddata from './components/SecondData.js'
 import ShopCollection from './components/ShopCollection/ShopCollection.jsx';
 import BestSeller from './components/BestSeller/BestSeller.jsx';
 import Promotion from './components/Promotion/Promotion.jsx';
+import BlocksSection from './components/BlocksSection/BlocksSection.jsx';
+import Instagram from './components/Instagram/Instagram.jsx';
+import Newsletter from './components/Newsletter/Newsletter.jsx';
+import Footer from './components/Footer/Footer.jsx';
 
 function App() {
   const {products} = data;
@@ -18,6 +22,10 @@ function App() {
       <ShopCollection/>
       <BestSeller products={bestproducts}/>
       <Promotion/>
+      <BlocksSection/>
+      <Instagram/>
+      <Newsletter/>
+      <Footer/>
     </>
   )
 }

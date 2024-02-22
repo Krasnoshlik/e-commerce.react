@@ -1,0 +1,34 @@
+.newsletter-wrapper {
+    background-image: url('../../assets/Newsletter/Newsletter.png'); 
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.newsletter-wrapper h2 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 500;
+}
+.email-wrapper {
+    padding-bottom: 6px;
+    border-bottom: 1px solid #6C7275;
+}
+.email-wrapper input {
+    width: 300px;
+    color: #6C7275;
+    background-color: transparent;
+    border: 0;
+}
+input:focus {
+    border: none;
+    padding-block: none;
+    outline: 0;
+}
+.email-wrapper button {
+    background-color: transparent;
+    color: #6C7275;
+    border: 0;
+}
