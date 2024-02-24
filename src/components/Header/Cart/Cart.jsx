@@ -1,18 +1,50 @@
 import './Cart.css'
-import Product1 from '../../../assets/Products/product1.jpg'
+import { useCart } from 'react-use-cart'
 
-export default function Cart() {
-    
+export default function Cart(){
+    const { 
+        isEmpty,
+        totalUniqueItems,
+        cartTotal,
+        updateItemQuantity,
+        items 
+    } = useCart();
+
+    if(isEmpty) return <></>
+
     return (
         <div className="cart-wrapper">
             <div className='closure-position'>
-            <h2>Order summary</h2>
+            <h2>Order summary: {totalUniqueItems} </h2>
             <div className='cart-closure'>x</div>
             </div>
             <div className='items-wrapper'>
 
-
-                <div className='item'>
+                {
+                    items.map((item, index) => {
+                        return (
+                    <div key={index} className='item'>
+                    <div className='initem-wrapper'>
+                        <img src={item.img} alt="product" />
+                        <div className='quantity-wrapper'>
+                            <h3>{item.title}</h3>
+                            <p>Color: Black</p>
+                            <div className='quantity-changer'>
+                            <button
+                            onClick={() => updateItemQuantity(item.id, item.quantity - 1)}
+                            >-</button>
+                            <div className='number-input'>{item.quantity}</div>
+                            <button
+                            onClick={() => updateItemQuantity(item.id, item.quantity + 1)}
+                            >+</button>
+                            </div> 
+                        </div>
+                    </div>
+                        <p>${item.price}</p>
+                    </div>
+                    )})
+                }
+                {/* <div className='item'>
                     <div className='initem-wrapper'>
                         <img src={Product1} alt="product" />
                         <div className='quantity-wrapper'>
@@ -26,23 +58,7 @@ export default function Cart() {
                         </div>
                     </div>
                         <p>$38.00</p>
-                </div>
-
-                <div className='item'>
-                    <div className='initem-wrapper'>
-                        <img src={Product1} alt="product" />
-                        <div className='quantity-wrapper'>
-                            <h3>Tray Table</h3>
-                            <p>Color: Black</p>
-                            <div className='quantity-changer'>
-                            <button>-</button>
-                            <div className='number-input'>1</div>
-                            <button>+</button>
-                            </div> 
-                        </div>
-                    </div>
-                        <p>$38.00</p>
-                    </div>
+                    </div> */}
 
 
                     <div className='finalisation-wrapper'>
@@ -55,12 +71,8 @@ export default function Cart() {
                             <p>Free</p>
                         </div>
                         <div className='total-info'>
-                            <h3>Subtotal</h3>
-                            <p>$99.0</p>
-                        </div>
-                        <div className='total-info'>
                             <h3>Total</h3>
-                            <p>$234.00</p>
+                            <p>$ {cartTotal.toFixed(2)} </p>
                         </div>
                         <button className='submit'>Checkout</button>
                     </div>

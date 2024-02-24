@@ -6,8 +6,10 @@ import CartSVG from '../../assets/icons/cart.svg'
 import Burgermenu from '../../assets/icons/burger-menu.svg'
 import CrossMenu from '../../assets/icons/Cross-menu.svg'
 import Cart from './Cart/Cart'
+import { useCart } from 'react-use-cart'
 
 export default function Header() {
+    const { totalItems }= useCart();
     const [burgmenu, setBurgmenu] = useState(false);
     const [cart, setCart] = useState(false);
 
@@ -51,7 +53,7 @@ export default function Header() {
         <div className='header-icons-wrapper'>
             <div className='search'><img src={Search} alt="search"/></div>
             <div className='account'><img src={Account} alt="account"/></div>
-            <div onClick={cartChanger} className='cart'><img src={CartSVG} alt="cart"/><div className='cart-count'>0</div></div>
+            <div onClick={cartChanger} className='cart'><img src={CartSVG} alt="cart"/><div className='cart-count'>{totalItems}</div></div>
             {cart && <Cart/>}
         </div>
       </header>

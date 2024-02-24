@@ -1,14 +1,14 @@
 import Product from "./Product";
 import './NewArrivals.css'
+import data from "../Data";
 
-export default function NewArrivals(props) {
-    const { products } = props;
+export default function NewArrivals() {
     return (
         <main>
             <h2>New Arrivals</h2>
             <div className="row">
-                {products.map((product) => (
-                    <Product key={product.id} product={product}></Product>
+                {data.productData.map((item, index) => (
+                    <Product key={index} img={item.img} title={item.title} price={item.price} item={item}></Product>
                 ))}
             </div>
         </main>

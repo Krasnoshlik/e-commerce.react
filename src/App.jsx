@@ -10,17 +10,20 @@ import BlocksSection from './components/BlocksSection/BlocksSection.jsx';
 import Instagram from './components/Instagram/Instagram.jsx';
 import Newsletter from './components/Newsletter/Newsletter.jsx';
 import Footer from './components/Footer/Footer.jsx';
+import { CartProvider } from 'react-use-cart';
 
 function App() {
-  const {products} = data;
+  const { productData } = data;
   const {bestproducts} = seconddata;
   return (
     <>
+      <CartProvider>
       <Header/>
       <Mainbanner/>
-      <NewArrivals products={products}></NewArrivals>
+      <NewArrivals products={productData}></NewArrivals>
       <ShopCollection/>
       <BestSeller products={bestproducts}/>
+      </CartProvider>
       <Promotion/>
       <BlocksSection/>
       <Instagram/>

@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { useCart } from 'react-use-cart';
 import './Product.css'
 
 export default function Product(props) {
-    const {product} = props;
+
+  const { addItem } = useCart();
 
     const [visible, setVisible] = useState(false);
 
@@ -14,14 +16,14 @@ export default function Product(props) {
     }
   return (
     <div className='product-wrapper'>
-        <img onMouseEnter={buttonVisible} onMouseOut={buttonInVisible} src={product.img} alt={product.title}></img>
-        <h3>{product.title}</h3>
+        <img onMouseEnter={buttonVisible} onMouseOut={buttonInVisible} src={props.img}></img>
+        <h3>{props.title}</h3>
         {visible &&
         <div onMouseEnter={buttonVisible} onMouseOut={buttonInVisible} className='button-position'>
-        <button>Add to cart</button>
+        <button onClick={() => addItem(props.item)}>Add to cart</button>
         </div>
         }
-        <div className='price'>$ {product.price}</div>
+        <div className='price'>$ {props.price}</div>
     </div>
   )
 }
