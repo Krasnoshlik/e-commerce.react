@@ -54,7 +54,7 @@ export default function Header() {
             <div className='search'><img src={Search} alt="search"/></div>
             <div className='account'><img src={Account} alt="account"/></div>
             <div onClick={cartChanger} className='cart'><img src={CartSVG} alt="cart"/><div className='cart-count'>{totalItems}</div></div>
-            {cart && <Cart/>}
+            {cart && <Cart cartChanger={cartChanger}/>}
         </div>
       </header>
     )

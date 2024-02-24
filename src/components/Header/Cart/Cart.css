@@ -17,6 +17,13 @@
 .closure-position h2 {
     margin: 0;
 }
+.cart-closure {
+    width: 10px;
+    height: 10px;
+}
+.cart-closure:hover {
+    cursor: pointer;
+}
 .item {
     display: flex;
     flex-direction: row;

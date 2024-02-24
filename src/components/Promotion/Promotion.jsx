@@ -2,7 +2,6 @@ import Dude from '../../assets/Best Seller/dudewithheadphones.png';
 import './Promotion.css'
 
 export default function Promotion() {
-
     return (
         <div className="promotion">
             <div className="promotion-left">

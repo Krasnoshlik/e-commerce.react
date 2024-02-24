@@ -1,7 +1,7 @@
 import './Cart.css'
 import { useCart } from 'react-use-cart'
 
-export default function Cart(){
+export default function Cart({cartChanger}){
     const { 
         isEmpty,
         totalUniqueItems,
@@ -16,13 +16,13 @@ export default function Cart(){
         <div className="cart-wrapper">
             <div className='closure-position'>
             <h2>Order summary: {totalUniqueItems} </h2>
-            <div className='cart-closure'>x</div>
+            <div className='cart-closure' onClick={cartChanger}>x</div>
             </div>
             <div className='items-wrapper'>
 
                 {
                     items.map((item, index) => {
-                        return (
+                    return (
                     <div key={index} className='item'>
                     <div className='initem-wrapper'>
                         <img src={item.img} alt="product" />
@@ -44,22 +44,6 @@ export default function Cart(){
                     </div>
                     )})
                 }
-                {/* <div className='item'>
-                    <div className='initem-wrapper'>
-                        <img src={Product1} alt="product" />
-                        <div className='quantity-wrapper'>
-                            <h3>Tray Table</h3>
-                            <p>Color: Black</p>
-                            <div className='quantity-changer'>
-                            <button>-</button>
-                            <div className='number-input'>1</div>
-                            <button>+</button>
-                            </div> 
-                        </div>
-                    </div>
-                        <p>$38.00</p>
-                    </div> */}
-
 
                     <div className='finalisation-wrapper'>
                         <div className='input-wrapper'>

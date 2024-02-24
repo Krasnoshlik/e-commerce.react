@@ -1,5 +1,5 @@
 const seconddata = {
-    bestproducts:[
+    secondproductData:[
         {
             id: 1,
             title: 'Sony - WH-1000XM5',

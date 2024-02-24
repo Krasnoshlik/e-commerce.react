@@ -14,7 +14,7 @@ import { CartProvider } from 'react-use-cart';
 
 function App() {
   const { productData } = data;
-  const {bestproducts} = seconddata;
+  const { bestproducts } = seconddata;
   return (
     <>
       <CartProvider>

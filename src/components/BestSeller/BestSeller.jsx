@@ -1,14 +1,14 @@
 import Product from "../NewArrivals/Product";
 import './BestSeller.css'
+import seconddata from "../SecondData";
 
-export default function BestSeller(props) {
-    const {products} = props;
+export default function BestSeller() {
     return (
         <div className="bestseller-wrapper">
             <h2>Best Seller</h2>
             <div className="row">
-            {products.map((product) => (
-                    <Product key={product.id} product={product}></Product>
+            {seconddata.secondproductData.map((item, index) => (
+                    <Product key={index} img={item.img} title={item.title} price={item.price} item={item}></Product>
                 ))}
             </div>
         </div>
