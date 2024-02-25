@@ -8,25 +8,34 @@
 }
 .insta-photos-wrapper {
     margin-top: 30px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     gap: 20px;
 }
 .insta-photos-wrapper img {
-    max-width: calc(25% - 20px);
+    max-width: 100%;
 }
+@media (min-width: 700px) {
 .insta-photos-wrapper img:hover {
     transition: ease-in-out 0.7s;
     transform: scale(1.1);
+}
 }
 .instagram-wrapper span {
     color: #6C7275;
     margin: 0;
 }
 .instagram-wrapper h2 {
-    font-size: 40px;
     margin: 0;
 }
 .instagram-wrapper p {
     margin: 6px 0px 6px;
+}
+
+@media (max-width: 700px) {
+    .insta-photos-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
 }

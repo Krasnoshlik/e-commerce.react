@@ -6,8 +6,8 @@ import ArrowRight from '../../assets/Collection/arrow-right.svg'
 
 export default function ShopCollection() {
     return (
-        <>
-        <h2 className='collection-heading'>Shop Collection</h2>
+        <div className='container'>
+        <h2 id="Shop" className='collection-heading'>Shop Collection</h2>
         <div className='collection-wrapper'>
 
             <div className='left-collection'>
@@ -47,6 +47,6 @@ export default function ShopCollection() {
             </div>
         </div>
         </div>
-        </>
+        </div>
     )
 }

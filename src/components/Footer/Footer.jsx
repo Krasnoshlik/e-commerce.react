@@ -5,7 +5,7 @@ import You from '../../assets/Footer/youtube.svg'
 
 export default function Footer() {
     return (
-        <footer>
+        <footer id='Contact'>
             <div className="footer-start-wrapper">
                 <div className="logo-wrapper">
                     <h2>3legant.</h2>

@@ -1,11 +1,13 @@
 .promotion {
-    max-width: 1440px;
-    max-height: 532px;
+    max-width: 100%;
+    max-height: 520px;
     display: flex;
     color: #121212;
+    overflow: hidden;
 }
 .promotion-left {
     min-width: 50%;
+    height: 100%;
 }
 .promotion-right {
     display: flex;
@@ -20,7 +22,6 @@
     color: #377DFF;
 }
 .promotion-right h2 {
-    font-size: 40px;
     margin: 0;
 }
 .promotion-right p {
@@ -46,7 +47,7 @@
 }
 .promotion-right button {
     max-width: fit-content;
-    margin-top: 24px;
+    margin-top: 20px;
     padding: 6px 40px 6px;
     background-color: black;
     color: white;
@@ -58,4 +59,14 @@
     background-color: white;
     color: #ffaa00a0;
     border-color:#ffaa00a0;
+}
+
+@media (max-width: 820px) {
+    .promotion-left {
+        display: none;
+    }
+    .promotion-right {
+        width: 100%;
+        padding: 20px;
+    }
 }

@@ -12,15 +12,39 @@ export default function Header() {
     const { totalItems }= useCart();
     const [burgmenu, setBurgmenu] = useState(false);
     const [cart, setCart] = useState(false);
-
     function cartChanger() {
         !cart ? setCart(true) : setCart(false)
     }
     function handleClick() {
         !burgmenu ? setBurgmenu(true) : setBurgmenu(false)
     }
+
+    const handleClickScroll = () => {
+        if(event.target.id === 'toStart') {
+            const element = document.getElementById('Start');
+            if(element) {
+            element.scrollIntoView({behavior: 'smooth'})
+            }}
+        if(event.target.id === 'toShop') {
+            const element = document.getElementById('Shop');
+            if(element) {
+              element.scrollIntoView({behavior: 'smooth'})
+            }}
+            if(event.target.id === 'toProduct') {
+                const element = document.getElementById('Product');
+                if(element) {
+                  element.scrollIntoView({behavior: 'smooth'})
+                }}
+                if(event.target.id === 'toContact') {
+                    const element = document.getElementById('Contact');
+                    if(element) {
+                      element.scrollIntoView({behavior: 'smooth'})
+                    }}
+    };
+
     return (
       <header>
+        <div className="header-wrapper">
         <h1 className='logo'>3legant.</h1>
         <div onClick={handleClick} className='burger-menu'><img src={Burgermenu} alt="burger-menu" /></div>
 
@@ -45,16 +69,17 @@ export default function Header() {
         </div>
         }
         <ul className='menu-list'>
-            <li>Home</li>
-            <li>Shop</li>
-            <li>Product</li>
-            <li>Contact Us</li>
+            <li id='toStart' onClick={handleClickScroll}>Home</li>
+            <li id='toShop' onClick={handleClickScroll}>Shop</li>
+            <li id='toProduct' onClick={handleClickScroll}>Product</li> 
+            <li id='toContact' onClick={handleClickScroll}>Contact Us</li>
         </ul>
         <div className='header-icons-wrapper'>
             <div className='search'><img src={Search} alt="search"/></div>
             <div className='account'><img src={Account} alt="account"/></div>
             <div onClick={cartChanger} className='cart'><img src={CartSVG} alt="cart"/><div className='cart-count'>{totalItems}</div></div>
             {cart && <Cart cartChanger={cartChanger}/>}
+        </div>
         </div>
       </header>
     )

@@ -1,12 +1,17 @@
 .blocks-wrapper {
-    display: flex;
-    flex-direction: row;
-    margin: 40px 20px 40px;
-    gap: 20px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 40px 0px 40px;
 }
 .block-wrapper {
-    width: calc(25% - 20px);
-    padding: 48px 32px 48px;
     background-color: #F3F5F7;
+    padding: 20px 20px 20px;
+}
+
+@media (max-width: 880px) {
+    .blocks-wrapper{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 1fr;
+    }
 }

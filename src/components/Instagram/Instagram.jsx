@@ -6,6 +6,7 @@ import In4 from '../../assets/Instagram/Insta4.png'
 
 export default function Instagram() {
     return (
+        <div className='container'>
         <div className="instagram-wrapper">
             <span>NEWSFEED</span>
             <h2>Instagram</h2>
@@ -17,6 +18,7 @@ export default function Instagram() {
                 <img src={In3} alt="In3"/>
                 <img src={In4} alt="In4"/>
             </div>
+        </div>
         </div>
     )
 }

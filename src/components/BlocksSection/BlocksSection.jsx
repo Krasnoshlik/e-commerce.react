@@ -6,6 +6,7 @@ import './BlocksSection.css'
 
 export default function BlocksSection() {
     return (
+        <div className='container'>
         <div className="blocks-wrapper">
             <div className="block-wrapper">
                 <img src={Car} alt="Car" />
@@ -21,7 +22,7 @@ export default function BlocksSection() {
 
             <div className="block-wrapper">
                 <img src={Lock} alt="Lock" />
-                <h3>Secure Payments</h3>
+                <h3>Payments</h3>
                 <p>Secured by Stripe</p>
             </div>
 
@@ -30,6 +31,7 @@ export default function BlocksSection() {
                 <h3>24/7 Support</h3>
                 <p>Phone and Email support</p>
             </div>
+        </div>
         </div>
     )
 }

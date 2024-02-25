@@ -1,10 +1,16 @@
 
 header {
-    display: flex;
-    justify-content: space-between;
-    background-color: #ffaa00a0;
-    align-items:center;
-    padding: 18px 5% 18px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fcc557;
+}
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  padding: 20px 5% 20px;
 }
 .burger-menu {
     display: none;

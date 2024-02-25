@@ -12,12 +12,10 @@ import Newsletter from './components/Newsletter/Newsletter.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import { CartProvider } from 'react-use-cart';
 
-
 function App() {
   const { productData } = data;
   const { bestproducts } = seconddata;
-
-
+  
   return (
     <>
       <CartProvider>
