@@ -2,18 +2,20 @@
     max-width: 1440px;
     max-height: 700px;
     overflow: hidden;
+    z-index: 1;
 }
 .main-banner-info-wrapper {
-
     max-width: 480px;
-    position: absolute;
+    position: relative;
     display: flex;
+    z-index: 1;
     flex-direction: column;
     gap: 20px;
 }
 .main-banner-info-wrapper-position {
-    position: relative;
-    top: 70px;
+    position: absolute;
+    z-index: 1;
+    top: 100px;
     left: 55%;
 }
 .main-banner-info-wrapper h1 {

@@ -1,10 +1,6 @@
-.hidden {
-    display: none;
-}
 
 header {
     display: flex;
-
     justify-content: space-between;
     background-color: #ffaa00a0;
     align-items:center;
@@ -65,7 +61,7 @@ header {
     cursor: pointer;
   }
   .burger-menu-mobile {
-    position: absolute;
+    position: fixed;
     z-index: 1000;
     width: 50%;
     height: 90%;

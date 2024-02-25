@@ -10,7 +10,7 @@ export default function Cart({cartChanger}){
         items 
     } = useCart();
 
-    if(isEmpty) return <></>
+    if(isEmpty) {return <></>}
 
     return (
         <div className="cart-wrapper">
@@ -61,6 +61,6 @@ export default function Cart({cartChanger}){
                         <button className='submit'>Checkout</button>
                     </div>
             </div>
-        </div>
+        </div> 
     )
 }
