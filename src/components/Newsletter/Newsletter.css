@@ -39,3 +39,14 @@ input:focus {
 .newsletter-wrapper p {
     margin: 6px 0px 14px;
 }
+@media (max-width: 500px) {
+    .newsletter-wrapper h2 {
+        font-size: 30px;
+    }
+    .email-wrapper input {
+        width: 200px;
+    }
+    .newsletter-wrapper{
+        font-size: 12px;
+    }
+}

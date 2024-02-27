@@ -75,3 +75,8 @@ footer {
         gap: 20px;
     }
 }
+@media (max-width: 500px) {
+    .menu-wrapper {
+        flex-direction: column;
+    }
+}

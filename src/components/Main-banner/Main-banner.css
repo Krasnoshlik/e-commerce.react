@@ -39,12 +39,14 @@
         border-radius: 6px;
     }
 }
+@media (min-width:800px) {
 .main-banner-info-wrapper button:hover {
     cursor: pointer;
     transition: ease-in-out 0.5s;
     background-color: white;
     color: #ffaa00a0;
     border: 1px solid white;
+}
 }
 .main-banner-info-wrapper h1 span {
     color: #377DFF;
@@ -65,5 +67,30 @@
 @media screen and (min-width: 1400px) {
     .main-banner-wrapper {
         max-height: 900px;
+    }
+}
+/* Mobile adaptive */
+@media screen and (max-width: 500px) {
+    .main-banner-info-wrapper h1 {
+        font-size: 22px;
+    }
+    .main-banner-info-wrapper p{
+        font-size: 10px;
+        font-weight: 500;
+    }
+    .main-banner-info-wrapper button {
+        max-width: 240px;
+        font-size: 10px;
+        color: white;
+        background-color: black;
+        padding: 10px 20px 10px;
+        border-radius: 6px;
+    }
+    .main-banner-info-wrapper {
+        gap: 10px;
+    }
+    .main-banner-info-wrapper-position {
+        top: 70px;
+        left: 50%;
     }
 }

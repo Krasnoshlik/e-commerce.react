@@ -49,3 +49,12 @@
 .in-img-button button img {
     width: 10px;
 }
+@media (max-width:500px) {
+    .collection-wrapper {
+        flex-direction: column;
+        gap: 0px;
+    }
+    .left-collection {
+        max-width: 100%;
+    }
+}

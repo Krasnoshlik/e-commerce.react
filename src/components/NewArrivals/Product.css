@@ -28,6 +28,7 @@
     color: white;
     background-color: black;
 }
+
 .button-position button:hover {
     cursor: pointer;
     transition: ease-in-out 0.5s;

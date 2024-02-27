@@ -6,12 +6,27 @@
 }
 .block-wrapper {
     background-color: #F3F5F7;
-    padding: 20px 20px 20px;
+    padding: 20px;
 }
 
 @media (max-width: 880px) {
     .blocks-wrapper{
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr 1fr;
+    }
+}
+@media (max-width: 500px) {
+    .blocks-wrapper {
+        grid-gap: 10px;
+        padding: 20px 0px 20px;
+    }
+    .blocks-wrapper img {
+        max-width: 30px;
+    }
+    .block-wrapper h3 {
+        font-size: 18px;
+    }
+    .block-wrapper p {
+        font-size: 12px;
     }
 }

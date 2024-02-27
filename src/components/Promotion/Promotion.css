@@ -69,4 +69,10 @@
         width: 100%;
         padding: 20px;
     }
+    .promotion-right h2 {
+        font-size: 30px;
+    }
+    .promotion-right p {
+        font-size: 12px;
+    }
 }

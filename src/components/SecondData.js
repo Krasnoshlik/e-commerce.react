@@ -25,7 +25,7 @@ const seconddata = {
             img: "https://i.ibb.co/HHf5m27/Bose-Quiet.png"
         },
         {
-            id: 2,
+            id: 8,
             title: 'Beats Studio Pro',
             price: 249.99,
             img: "https://i.ibb.co/kxGYG9M/JBLReflect.png" 

@@ -36,3 +36,6 @@ h1 {
     color: #747bff;
   }
 }
+@media screen and (max-width: 500px) {
+  .container {padding: 0px 10px 0px;}
+}

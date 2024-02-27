@@ -10,9 +10,9 @@ export default function Cart({cartChanger}){
         items 
     } = useCart();
 
-    if(isEmpty) {return <></>}
+    if(isEmpty) return <></>
 
-    return (
+    return (  
         <div className="cart-wrapper">
             <div className='closure-position'>
             <h2>Order summary: {totalUniqueItems} </h2>

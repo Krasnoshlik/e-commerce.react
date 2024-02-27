@@ -39,3 +39,11 @@
         grid-template-rows: repeat(2,1fr);
     }
 }
+@media (max-width:500px) {
+    .instagram-wrapper {
+        margin: 20px 0px 20px;
+    }
+    .insta-photos-wrapper {
+        gap: 10px;
+    }
+}
