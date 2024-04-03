@@ -1,5 +1,6 @@
 import './Cart.css'
-import { useCart } from 'react-use-cart'
+import { useCart } from 'react-use-cart';
+
 
 export default function Cart({cartChanger}){
     const { 
@@ -12,14 +13,14 @@ export default function Cart({cartChanger}){
 
     if(isEmpty) return <></>
 
-    return (  
+    return ( 
+        <div className='cart-wrapper-position'>
         <div className="cart-wrapper">
             <div className='closure-position'>
             <h2>Order summary: {totalUniqueItems} </h2>
             <div className='cart-closure' onClick={cartChanger}>x</div>
             </div>
             <div className='items-wrapper'>
-
                 {
                     items.map((item, index) => {
                     return (
@@ -62,5 +63,6 @@ export default function Cart({cartChanger}){
                     </div>
             </div>
         </div> 
+        </div>
     )
 }

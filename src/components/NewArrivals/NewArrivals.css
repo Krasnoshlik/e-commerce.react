@@ -4,8 +4,6 @@
     margin-left: 20px;
 }
 .row {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
     padding: 0px 20px 0px;
 }

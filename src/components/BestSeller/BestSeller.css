@@ -5,6 +5,17 @@
     font-size: 30px;
     font-weight: 600;
 }
+.best-seller {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 0px 20px 0px;
+}
+@media (max-width: 740px) {
+    .best-seller {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 @media (max-width: 500px) {
     .bestseller-wrapper {
         margin-bottom: 50px;
@@ -12,5 +23,8 @@
     .bestseller-wrapper h2 {
         font-size: 20px;
         font-weight: 600;
+    }
+    .best-seller {
+        grid-template-columns: repeat(2, 1fr);
     }
 }

@@ -1,11 +1,14 @@
+.cart-wrapper-position {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 .cart-wrapper {
-    position: fixed;
+    position: relative;
     z-index: 1000;
     padding: 20px 20px 20px;
-    right: 0px;
     width: 300px;
-    height: 100%;
-    top: 0px;
+    height: 100vh;
     background-color: white;
     line-height:normal;
 }
@@ -82,6 +85,11 @@
     padding: 10px 10px 10px;
     border: 1px solid rgba(223, 223, 223, 0.771);
     border-radius: 4px;
+}
+.input-wrapper input:focus{
+    border: 1px solid rgba(223, 223, 223, 0.771);
+    border-radius: 4px;
+    box-shadow: 0px -2px 8px 3px rgb(252, 225, 53);
 }
 .input-wrapper button {
     margin-left: 10px;

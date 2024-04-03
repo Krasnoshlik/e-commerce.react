@@ -7,7 +7,7 @@ export default function BestSeller() {
         <div className="container">
         <div id="Product" className="bestseller-wrapper">
             <h2>Best Seller</h2>
-            <div className="row">
+            <div className="best-seller">
             {seconddata.secondproductData.map((item, index) => (
                     <Product key={index} img={item.img} title={item.title} price={item.price} item={item}></Product>
                 ))}

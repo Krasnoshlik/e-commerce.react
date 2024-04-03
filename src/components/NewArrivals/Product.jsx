@@ -1,12 +1,20 @@
 import { useState } from 'react';
 import { useCart } from 'react-use-cart';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Product.css'
 
-export default function Product(props) {
-
+export default function Product({item}) {
   const { addItem } = useCart();
+  const { totalItems }= useCart();
+  const [visible, setVisible] = useState(false);
 
-    const [visible, setVisible] = useState(false);
+  function handleClick() {
+    addItem(item)
+    if(totalItems > 0){
+      toast.success("item added");
+      }
+  } 
 
     function buttonVisible () {
       setVisible(true)
@@ -16,14 +24,13 @@ export default function Product(props) {
     }
   return (
     <div className='product-wrapper'>
-        <img onMouseEnter={buttonVisible} onMouseOut={buttonInVisible} src={props.img}></img>
-        <h3>{props.title}</h3>
+        <img onMouseEnter={buttonVisible} onMouseOut={buttonInVisible} src={item.img}></img>
+        <h3>{item.title}</h3>
         {visible &&
         <div onMouseEnter={buttonVisible} onMouseOut={buttonInVisible} className='button-position'>
-        <button onClick={() => addItem(props.item)}>Add to cart</button>
+        <button onClick={handleClick}>Add to cart</button>
         </div>
         }
-        <div className='price'>$ {props.price}</div>
+        <div className='price'>$ {item.price}</div>
     </div>
-  )
-}
+  )}

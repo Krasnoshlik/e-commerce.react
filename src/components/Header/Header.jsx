@@ -7,13 +7,17 @@ import Burgermenu from '../../assets/icons/burger-menu.svg'
 import CrossMenu from '../../assets/icons/Cross-menu.svg'
 import Cart from './Cart/Cart'
 import { useCart } from 'react-use-cart'
+import { toast } from 'react-toastify';
 
 export default function Header() {
     const { totalItems }= useCart();
     const [burgmenu, setBurgmenu] = useState(false);
     const [cart, setCart] = useState(false);
+
+
     function cartChanger() {
         !cart ? setCart(true) : setCart(false)
+        if(totalItems === 0)toast.error("No Items in Cart");
     }
     function handleClick() {
         !burgmenu ? setBurgmenu(true) : setBurgmenu(false)
@@ -46,9 +50,9 @@ export default function Header() {
       <header>
         <div className="header-wrapper">
         <h1 className='logo'>3legant.</h1>
-        <div onClick={handleClick} className='burger-menu'><img src={Burgermenu} alt="burger-menu" /></div>
 
-        {burgmenu &&
+        {burgmenu &&   
+        <div className='burger-menu-position'>
         <div className='burger-menu-mobile'>
         <div className='mobile-logo-wrapper'>
             <h4 className='mobile-logo'>3legant.</h4>
@@ -67,7 +71,11 @@ export default function Header() {
         </ul>
         <button>Sign-In</button>
         </div>
-        }
+        </div>
+       }
+
+        <div onClick={handleClick} className='burger-menu'><img src={Burgermenu} alt="burger-menu" /></div>
+
         <ul className='menu-list'>
             <li id='toStart' onClick={handleClickScroll}>Home</li>
             <li id='toShop' onClick={handleClickScroll}>Shop</li>

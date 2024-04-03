@@ -1,9 +1,10 @@
 .product-wrapper{
-    flex-basis: 260px;
+    max-width: 260px;
+    min-width: 160px;
     display: flex;
     margin: auto;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .product-wrapper img {
     width: 100%;
@@ -35,4 +36,7 @@
     background-color: white;
     color: #ffaa00a0;
     border-color: #ffaa00a0;
+}
+.swiper-slide {
+    max-width: 260px;
 }
