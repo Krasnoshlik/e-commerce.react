@@ -11,6 +11,7 @@ import Instagram from './components/Instagram/Instagram.jsx';
 import Newsletter from './components/Newsletter/Newsletter.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import { CartProvider } from 'react-use-cart';
+import { ToastContainer } from 'react-toastify'
 
 function App() {
   const { productData } = data;
@@ -30,6 +31,7 @@ function App() {
       <Instagram/>
       <Newsletter/>
       <Footer/>
+      <ToastContainer  autoClose={1000} hideProgressBar={true} newestOnTop={false} closeOnClick/>
     </>
   )
 }
