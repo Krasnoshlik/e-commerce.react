@@ -11,11 +11,31 @@ import Instagram from './components/Instagram/Instagram.jsx';
 import Newsletter from './components/Newsletter/Newsletter.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import { CartProvider } from 'react-use-cart';
-import { ToastContainer } from 'react-toastify'
+import { ToastContainer } from 'react-toastify';
+import {useState, useEffect} from 'react';
 
 function App() {
   const { productData } = data;
   const { bestproducts } = seconddata;
+  const [isLoading, setLoading] = useState(true);
+
+  function someRequest() {
+    return new Promise(resolve => setTimeout(() => resolve(), 2000));
+  }
+
+  useEffect(() => {
+    someRequest().then(() => {
+      const loaderElement = document.querySelector(".loader-container");
+      if (loaderElement) {
+        loaderElement.remove();
+        setLoading(!isLoading);
+      }
+    });
+  });
+
+  if (isLoading) {
+    return null;
+  }
   
   return (
     <>
