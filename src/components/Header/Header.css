@@ -1,9 +1,8 @@
-
 header {
     width: 100%;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
     background-color: #fcc557;
 }
 .header-wrapper {
@@ -57,6 +56,10 @@ header {
     border-radius: 14px;
     background-color: black;
 }
+.ReactModal__Body--open,
+.ReactModal__Html--open {
+  overflow: hidden;
+}
 @media screen and (max-width: 700px) {
   .menu-list, .account, .search {
     display: none;
@@ -71,7 +74,7 @@ header {
   }
   .burger-menu-mobile {
     position: fixed;
-    z-index: 1000;
+    z-index: 100;
     width: 250px;
     height: 100vh;
     background-color: white;
