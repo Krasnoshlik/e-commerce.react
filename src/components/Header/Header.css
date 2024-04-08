@@ -37,9 +37,32 @@ header {
 .header-icons-wrapper {
     display: flex;
     line-height: 0;
-    gap: 16px;
 }
+.logOut__button__position {
+  position: relative;
+}
+.logOut__button {
+  position: absolute;
+    width: 200px;
+    font-size: 12px;
+    top: 30px;
+    right: -90px;
+    color: white;
+    background-color: black;
+    padding: 10px 10px 10px;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+.logOut__button:hover {
+cursor: pointer;
+transition: ease-in-out 0.5s;
+background-color: white;
+color: #ffaa00a0;
+border: 1px solid white;
+}
+
 .cart {
+  margin-left: 12px;
     display: flex;
     gap: 4px;
 }
@@ -59,6 +82,10 @@ header {
 .ReactModal__Body--open,
 .ReactModal__Html--open {
   overflow: hidden;
+}
+.account {
+  width: 20px;
+  height: 20px;
 }
 @media screen and (max-width: 700px) {
   .menu-list, .account, .search {

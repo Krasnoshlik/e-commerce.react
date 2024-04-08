@@ -1,73 +1,74 @@
 .darkBG {
-    background-color: rgba(0, 0, 0, 0.2);
-    width: 100vw;
-    height: 100vh;
-    z-index: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-  }
-  
+  background-color: rgba(0, 0, 0, 0.544);
+  width: 100vw;
+  height: 200vh;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
   .centered {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  
   .modal {
-    width: 250px;
-    height: 170px;
     background: white;
     color: white;
     z-index: 10;
-    border-radius: 16px;
+    border-radius: 0px;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
   }
-  
-  .modalHeader {
-    height: 50px;
-    background: white;
+  .modal__image {
     overflow: hidden;
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
+    max-height: 460px;
+    min-width: 20%;
   }
-  
-  .heading {
+  @media (max-width: 850px) {
+    .modal__image {
+      display: none;
+    }
+  }
+  .modal__wrapper {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  .modal__wrapper form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .passwordreset__wrapper{
+    color: #fcc557;
+    margin-top: 10px;
+  }
+  .modal__wrapper p {
+    font-size: 30px;
+    align-self: flex-start;
+    color: black;
     margin: 0;
-    padding: 10px;
-    color: #2c3e50;
-    font-weight: 500;
-    font-size: 18px;
-    text-align: center;
+    margin-bottom: 50px;
   }
-  
   .modalContent {
-    padding: 10px;
+    max-width: 840px;
+    max-height: 460px;
+    display: flex;
     font-size: 14px;
     color: #2c3e50;
     text-align: center;
-  }
-  
-  .modalActions {
-    position: absolute;
-    bottom: 2px;
-    margin-bottom: 10px;
-    width: 100%;
-  }
-  
-  .actionsContainer {
-    display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: center;
   }
-  
   .closeBtn {
     cursor: pointer;
     font-weight: 500;
-    padding: 4px 8px;
-    border-radius: 8px;
+    padding: 8px 8px;
+    padding-bottom: 4px;
+    border-radius: 50%;
     border: none;
     font-size: 18px;
     color: #2c3e50;
@@ -75,6 +76,7 @@
     transition: all 0.25s ease;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.06);
     position: absolute;
+    border: 2px solid #fcc557;
     right: 0;
     top: 0;
     align-self: flex-end;
@@ -84,43 +86,107 @@
   
   .closeBtn:hover {
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
-    transform: translate(-4px, 4px);
+    transform: translate(6px, -6px);
   }
-  
-  .deleteBtn {
-    margin-top: 10px;
-    cursor: pointer;
-    font-weight: 500;
-    padding: 11px 28px;
-    border-radius: 12px;
-    font-size: 0.8rem;
-    border: none;
-    color: #fff;
-    background: #ff3e4e;
-    transition: all 0.25s ease;
-  }
-  
-  .deleteBtn:hover {
-    box-shadow: 0 10px 20px -10px rgba(255, 62, 78, 0.6);
-    transform: translateY(-5px);
-    background: #ff3e4e;
-  }
-  
-  .cancelBtn {
-    margin-top: 10px;
-    cursor: pointer;
-    font-weight: 500;
-    padding: 11px 28px;
-    border-radius: 12px;
-    font-size: 0.8rem;
-    border: none;
-    color: #2c3e50;
-    background: #fcfcfc;
-    transition: all 0.25s ease;
-  }
-  
-  .cancelBtn:hover {
-    box-shadow: none;
-    transform: none;
-    background: whitesmoke;
-  }
+.log_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+.log_wrapper label {
+  color: black;
+  font-weight: 600;
+}
+.log_wrapper input {
+  width: 320px;
+  border: 2px solid #fcc557;
+  padding: 8px;
+}
+.log_wrapper input:focus {
+  border: 2px solid #fcc557;
+}
+.login_button_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.login_button_wrapper button {
+  cursor: pointer;
+  padding: 6px 30px 6px;
+  border: none;
+  border-radius: 3px;
+  background-color: #fcc557;
+  color: white;
+}
+.show__password__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.show-pass-position {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+}
+.show__password__wrapper input[type=checkbox] {
+  width: 12px;
+}
+
+.signin_wrapper {
+  color: #fcc557;
+  margin: 0;
+}
+.login_via__services__text__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.login_via__services__text__wrapper span {
+  width: 40px;
+  height: 0;
+  border: 0.5px solid rgba(0, 0, 0, 0.098);
+}
+.login_via__services__text__wrapper h4 {
+  font-weight: 500;
+}
+.login_via__services__buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.login_via__services__buttons button {
+  cursor: pointer;
+  display: flex;
+  padding: 6px 30px 6px;
+  border: none;
+  border-radius: 3px;
+  color: white;
+}
+
+/* sign in start */
+.modal__wrapper__sign-in {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.modal__wrapper__sign-in form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.passwordreset__wrapper__sign-in{
+  color: #fcc557;
+  margin-top: 10px;
+}
+.modal__wrapper__sign-in p {
+  font-size: 30px;
+  align-self: flex-start;
+  color: black;
+  margin: 0;
+  margin-bottom: 50px;
+}

@@ -17,6 +17,7 @@ import {useState, useEffect} from 'react';
 function App() {
   const { productData } = data;
   const { bestproducts } = seconddata;
+  
   const [isLoading, setLoading] = useState(true);
 
   function someRequest() {

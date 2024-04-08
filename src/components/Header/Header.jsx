@@ -1,6 +1,6 @@
 import { useState } from "react";
+import { MdOutlineAccountCircle, MdAccountCircle } from "react-icons/md";
 import "./Header.css";
-import AccountI from "../../assets/icons/account.svg";
 import CartSVG from "../../assets/icons/cart.svg";
 import Burgermenu from "../../assets/icons/burger-menu.svg";
 import CrossMenu from "../../assets/icons/Cross-menu.svg";
@@ -8,12 +8,16 @@ import Cart from "./Cart/Cart";
 import { useCart } from "react-use-cart";
 import { toast } from "react-toastify";
 import { AuthModal } from "./Account/AuthModal/AuthModal";
+import { useSelector, useDispatch } from 'react-redux';
+import { setUserLogOut } from "../../redux/usersSlice";
 
 export default function Header() {
+  const someUserLoged = useSelector((state) => state.userLogedIn.userLoged);
+  const dispatch = useDispatch();
   const { totalItems } = useCart();
   const [burgmenu, setBurgmenu] = useState(false);
   const [cart, setCart] = useState(false);
-
+  const [logOut, setLogOut] = useState(false)
   const [isOpen, setIsOpen] = useState(false);
 
   function cartChanger() {
@@ -50,6 +54,11 @@ export default function Header() {
       }
     }
   };
+  function handleLogOut() {
+    setLogOut(false);
+    dispatch(setUserLogOut(false));
+    toast("You logged out your account!")
+  }
 
   return (
     <header>
@@ -99,11 +108,21 @@ export default function Header() {
           </li>
         </ul>
         <div className="header-icons-wrapper">
-          <div className="account" onClick={() => setIsOpen(true)}>
-            <img src={AccountI} alt="account" />
+          <div className="account" >
+            { !someUserLoged ?
+            <MdOutlineAccountCircle size={22.5} onClick={() => setIsOpen(true)}/> : 
+            <MdAccountCircle size={22.5} onClick={() => setLogOut(true)}/>
+            }
           </div>
-          {isOpen && 
-          <AuthModal setIsOpen={setIsOpen}/>}
+          {logOut && 
+          <div className="logOut__button__position">
+          <button className="logOut__button"  onClick={handleLogOut}>Log out from my account</button>
+          </div>
+          }
+          {isOpen &&
+          <AuthModal setIsOpen={setIsOpen}
+          />}
+
           <div onClick={cartChanger} className="cart">
             <img src={CartSVG} alt="cart" />
             <div className="cart-count">{totalItems}</div>
