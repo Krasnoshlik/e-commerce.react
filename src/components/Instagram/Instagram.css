@@ -17,10 +17,6 @@
     max-width: 100%;
 }
 @media (min-width: 700px) {
-.insta-photos-wrapper img:hover {
-    transition: ease-in-out 0.7s;
-    transform: scale(1.1);
-}
 }
 .instagram-wrapper span {
     color: #6C7275;
